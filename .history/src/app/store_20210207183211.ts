@@ -5,7 +5,7 @@ import covidReducer from '../features/covid/covidSlice';
 export const store = configureStore({
   reducer: {
     counter: counterReducer,
-    covid: covidReducer,
+    covid: covidReducer
   },
 });
 
