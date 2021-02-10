@@ -49,37 +49,37 @@ const DashBoard: React.FC = () => {
 
     return (
         <MuiThemeProvider theme={theme}>
-            <div>
-                <AppBar color="secondary" position="absolute">
-                    <Toolbar>
-                        <Typography variant="h6" className={classes.title}>
-                            Covid 19 Live Dashboard
-                        </Typography>
-                        <div>
-                            <Typography variant="body1">
-                                {new Date(daily[daily.length - 1].Date).toDateString()}
-                            </Typography>
-                        </div>
-                    </Toolbar>
-                </AppBar>
+        <div>
+            <AppBar color="secondary" position="absolute">
+            <Toolbar>
+                <Typography variant="h6" className={classes.title}>
+                Covid 19 Live Dashboard
+                </Typography>
+                <div>
+                <Typography variant="body1">
+                    {new Date(daily[daily.length - 1].Date).toDateString()}
+                </Typography>
+                </div>
+            </Toolbar>
+            </AppBar>
 
-                <Container className={classes.content}>
-                    <div className={styles.container}>
-                        <SwitchCountry />
-                    </div>
-                    <Grid container spacing={3}>
-                        <Grid item xs={12} md={12}>
-                            <Cards />
-                        </Grid>
-                        <Grid item xs={12} md={7}>
-                            <Chart />
-                        </Grid>
-                        <Grid item xs={12} md={5}>
-                            <PieChart />
-                        </Grid>
-                    </Grid>
-                </Container>
+            <Container className={classes.content}>
+            <div className={styles.container}>
+                <SwitchCountry />
             </div>
+            <Grid container spacing={3}>
+                <Grid item xs={12} md={12}>
+                <Cards />
+                </Grid>
+                <Grid item xs={12} md={7}>
+                <Chart />
+                </Grid>
+                <Grid item xs={12} md={5}>
+                <PieChart />
+                </Grid>
+            </Grid>
+            </Container>
+        </div>
         </MuiThemeProvider>
     );
 };
